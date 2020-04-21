@@ -16,7 +16,7 @@ Test project uses Spring Framework, AppMesh, ECS, DynamoDB, CodePipeline. Dynomo
 - Feature Toggles - using bullettrain or rollout and more....
 
 # Update #1 Initial commit includes same app using docker plugin.
-mvn clean package 
-docker run --publish 8200:80 omathias/servicea:0.0.1-SNAPSHOT
-docker run --publish 8201:80 omathias/serviceb:0.0.1-SNAPSHOT
+mvn clean package   
+docker run --publish 8200:80 omathias/servicea:0.0.1-SNAPSHOT  
+docker run --publish 8201:80 omathias/serviceb:0.0.1-SNAPSHOT  
 

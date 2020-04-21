@@ -1,6 +1,6 @@
 # Reference Microservice Implementation
 Test project uses Spring Framework, AppMesh, ECS, DynamoDB, CodePipeline. DynomoDB stream, Kinesis, InfluxDB, bullettrain. The project create a basic shell emulating the above combination of technologies. It implements familiar microservices patterns from microservices.io
-# Implmentation Details - The reference implementation will evolve to include the following:
+# Details - The reference implementation will evolve to include the following:
 - Repotype - Mono Repo
 - CodePipeline - Build and Deploy to ECS
 - Microservice Chassis - https://microservices.io/patterns/microservice-chassis.html. Makes it easy to scale microservices development

@@ -1,35 +1,21 @@
-# Hello World Rest API
+# Reference Microservice Implementation
+Test project uses Spring Framework, AppMesh, ECS, DynamoDB, CodePipeline. DynomoDB stream, Kinesis The project create a basic shell emulating the above combination of technologies. It implements familiar microservices patterns like microservices chassis, transacation outbox etc.
 
-- Main class com.in28minutes.rest.webservices.restfulwebservices.RestfulWebServicesApplication 
-- You cannot run this app on local as it is configured to run on port 80 - https://serverfault.com/questions/112795/how-to-run-a-server-on-port-80-as-a-normal-user-on-linux. You can run it as a docker container as shown below
+# Project Details - The reference project will evolve to include the following:
+- CodePipeline - Build and Deploy to ECS
+- Microservice Chassis - https://microservices.io/patterns/microservice-chassis.html. Makes it easy to scale microservices development
+- Intermicroservices communication Event Driven - Using DynamDB streams and Kinesis
+- Intermicroservices communication API Driven - Using AppMesh
+- Service Flow flexibility - Can a new service be easily plugged into the flow of service communication with minimal changes
+- AppMesh (ServiceMesh) - Distributed Tracing, Canary Deployments, SSL Termination, Blue/Green
+- CloudMap - Service Discovery
+- Service Catalog - The AWS stack - ECS, AppMesh, Kinesis & DynamoDB will be made availlable via Service Catalog & CFN
+- Telemetry - Jaeger, Graphana and Prometheus
+- Enhanced Telemetry - Kinesis and Influx DB
+- Feature Toggles - using bullettrain or rollout and more....
 
+# Update #1 Initial commit includes same app using docker plugin.
+mvn clean package 
+docker run --publish 8200:80 omathias/servicea:0.0.1-SNAPSHOT
+docker run --publish 8201:80 omathias/serviceb:0.0.1-SNAPSHOT
 
-### Creating Containers
-
-- mvn clean package
-- docker run --publish 8200:80 in28min/aws-hello-world-rest-api:0.0.1-SNAPSHOT
-
-```
-docker login
-docker push @@REPO@@/aws-hello-world-rest-api:0.0.1-SNAPSHOT
-```
-
-## Test URLs
-
-- http://localhost:8200/hello-world
-
-```txt
-Hello World
-```
-
-- http://localhost:8200/hello-world-bean
-
-```json
-{"message":"Hello World - Changed"}
-```
-
-- http://localhost:8200/hello-world/path-variable/in28minutes
-
-```json
-{"message":"Hello World, in28minutes"}
-```

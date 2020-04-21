@@ -2,6 +2,7 @@
 Test project uses Spring Framework, AppMesh, ECS, DynamoDB, CodePipeline. DynomoDB stream, Kinesis The project create a basic shell emulating the above combination of technologies. It implements familiar microservices patterns like microservices chassis, transacation outbox etc.
 
 # Project Details - The reference project will evolve to include the following:
+- Repotype - Mono Repo
 - CodePipeline - Build and Deploy to ECS
 - Microservice Chassis - https://microservices.io/patterns/microservice-chassis.html. Makes it easy to scale microservices development
 - Intermicroservices communication Event Driven - Using DynamDB streams and Kinesis
